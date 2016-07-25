@@ -1,0 +1,115 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\title{Programación de Computadores}
+\date{}
+\begin{document}
+\maketitle
+\section{Objetivo}
+Construir una suite estadística en la cual podamos utilizar los principales conceptos de la programación estructurada por medio del lenguaje de programación C++, en el cual se cree una interfaz por medio de la terminal que sea amigable con el usuario final.
+\section{Descripcion:}
+
+
+\begin{itemize}
+	\item El programa debe mostrar una pantalla de bienvenida.
+	\item En el menú principal deben estar la siguientes opciones:
+		
+	\begin{enumerate}
+		\item Cargar datos
+		\item Análisis Estadístico
+		\item Combinatoria
+		\item Acerca de
+		\item Salir
+	\end{enumerate}
+
+	\item En Análisis Estadístico debemos hacer otro menú con la siguientes opciones:
+	\begin{enumerate}
+		\item Máximo valor
+		\item Mínimo valor
+		\item Rango
+		\item Media
+		\item Media Geométrica
+		\item Medio Armónica
+		\item Mediana
+		\item Moda
+		\item Varianza
+		\item Desviación Estándar
+		\item Cuartil
+		\item Rango Intercuartilico
+		\item Limite Superior
+		\item Limite Inferior
+		\item Asimetria de Pearson
+		\item Asimetria de Bowley
+		\item Asimetria de Fisher
+		\item Coeficiente de Apuntamiento		
+	\end{enumerate}
+	
+	\item En Combinatoria debemos hacer otro menú con las siguientes opciones:
+	\begin{enumerate}
+		\item Permutacion
+		\item Combinatoria
+	\end{enumerate}
+	
+	\item En Acerca de debemos hacer un pantallazo mostrando nuestro información y la del programa
+	
+	\item En la opcion de salir debemos hacer un menu preguntandole al usuario si realmente esta seguro.
+	
+\end{itemize}
+
+\section{Consideraciones:}
+
+\begin{itemize}
+	\item El proyecto debe hacerse en el sistema operativo Windows.
+	\item Es muy útil organizar el nuestros datos para poder hacer nuestro analisis estadistico esto lo logramos de la siguiente manera.
+	\begin{enumerate}
+		\item Importamos la siguiente librería:
+			\begin{verbatim}
+			#include <algorithm> 
+			\end{verbatim}
+		\item Ordenamos con la siguiente instrucción:
+			\begin{verbatim}
+			sort( datos, datos+cantidad );
+			\end{verbatim}
+	\end{enumerate}
+	\item Las firmas de las función deben ser la siguientes:
+	\begin{verbatim} 
+		* double max( double *x, int n );
+		* double min( double* x, int n );
+		* double rango( double* x, int n );
+		* double media( double* x, int n );
+		* double mediaGeometrica( double* x, int n );
+		* double mediaArmonica( double* x, int n );
+		* double mediana( double* x, int n );
+		* double moda( double* x, int n );
+		* double varianza( double* x, int n );
+		* double desviacion_estandar( double* x, int n );
+		* double rango_intercuartilico( double* x, int n );
+		* double asimetria_pearson( double* x, int n );
+		* double asimetria_bowley( double* x, int n );
+		* double asimetria_fisher( double* x, int n );
+		* double coeficiente_apuntamiento( double* x, int n );
+		* int permutacion( int n, int k );
+		* int combinacion( int n, int k );
+	\end{verbatim}
+	
+	\item Hay algunas funciones importantes en la librería cmath. \href{http://www.cplusplus.com/reference/cmath/}{Aquí}
+	 esta la descripción de todas las funciones en esta librería.
+
+	\item Para cargar los datos al sistema es útil la librería fstream. \href{http://www.cplusplus.com/reference/fstream/}{Aquí}
+	esta la descripción.
+	\item El formato del archivo que vamos a cargar es el siguiente: primero colocamos numero de datos seguidos de nuestros datos a analizar todos estos separados por un espacio.
+	\begin{flushleft}
+		\text{Ejemplo:}
+	\end{flushleft}
+	\begin{verbatim}
+	4 5.6 86.8 6.4 5.6
+	\end{verbatim}
+	\item Siempre debemos limpiar la memoria reservada con el comando \begin{verbatim}delete\end{verbatim}.
+\end{itemize}
+	
+\end{document}
