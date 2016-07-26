@@ -7,9 +7,8 @@ using namespace std;
 int main()
 {
     bool abierto = false;
-    double *datos;
-    int cantidad;
-    short opcion;
+    double *x;
+    int n, opcion;
     system( "pause" );
     /*
         Aqui hacemos la pantalla de bienvenida

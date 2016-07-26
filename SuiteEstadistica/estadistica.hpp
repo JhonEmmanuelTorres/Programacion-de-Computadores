@@ -19,17 +19,17 @@ double moda( double* x, int n );
 
 double varianza( double* x, int n );
 
-double desviacion_estandar( double* x, int n );
+double desviacionEstandar( double* x, int n );
 
-double rango_intercuartilico( double* x, int n );
+double rangoIntercuartilico( double* x, int n );
 
-double asimetria_pearson( double* x, int n );
+double asimetriaPearson( double* x, int n );
 
-double asimetria_bowley( double* x, int n );
+double asimetriaBowley( double* x, int n );
 
-double asimetria_fisher( double* x, int n );
+double asimetriaFisher( double* x, int n );
 
-double coeficiente_apuntamiento( double* x, int n );
+double coeficienteApuntamiento( double* x, int n );
 
 int permutacion( int n, int k );
 

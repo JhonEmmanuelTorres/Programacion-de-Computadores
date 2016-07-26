@@ -41,8 +41,6 @@ Construir una suite estadística en la cual podamos utilizar los principales con
 		\item Desviación Estándar
 		\item Cuartil
 		\item Rango Intercuartilico
-		\item Limite Superior
-		\item Limite Inferior
 		\item Asimetria de Pearson
 		\item Asimetria de Bowley
 		\item Asimetria de Fisher
@@ -55,9 +53,9 @@ Construir una suite estadística en la cual podamos utilizar los principales con
 		\item Combinatoria
 	\end{enumerate}
 	
-	\item En Acerca de debemos hacer un pantallazo mostrando nuestro información y la del programa
+	\item En "Acerca de" debemos hacer un pantallazo mostrando la información del programa.
 	
-	\item En la opcion de salir debemos hacer un menu preguntandole al usuario si realmente esta seguro.
+	\item En la opción "Salir" debemos hacer un menú preguntándole al usuario si realmente esta seguro de salir.
 	
 \end{itemize}
 
@@ -73,11 +71,12 @@ Construir una suite estadística en la cual podamos utilizar los principales con
 			\end{verbatim}
 		\item Ordenamos con la siguiente instrucción:
 			\begin{verbatim}
-			sort( datos, datos+cantidad );
+			sort( x, x+n );
 			\end{verbatim}
 	\end{enumerate}
 	\item Las firmas de las función deben ser la siguientes:
 	\begin{verbatim} 
+		* void cargarDatos( string ruta, double *x, int &n );
 		* double max( double *x, int n );
 		* double min( double* x, int n );
 		* double rango( double* x, int n );
@@ -87,12 +86,12 @@ Construir una suite estadística en la cual podamos utilizar los principales con
 		* double mediana( double* x, int n );
 		* double moda( double* x, int n );
 		* double varianza( double* x, int n );
-		* double desviacion_estandar( double* x, int n );
-		* double rango_intercuartilico( double* x, int n );
-		* double asimetria_pearson( double* x, int n );
-		* double asimetria_bowley( double* x, int n );
-		* double asimetria_fisher( double* x, int n );
-		* double coeficiente_apuntamiento( double* x, int n );
+		* double desviacionEstandar( double* x, int n );
+		* double rangoIntercuartilico( double* x, int n );
+		* double asimetriaPearson( double* x, int n );
+		* double asimetriaBowley( double* x, int n );
+		* double asimetriaFisher( double* x, int n );
+		* double coeficienteApuntamiento( double* x, int n );
 		* int permutacion( int n, int k );
 		* int combinacion( int n, int k );
 	\end{verbatim}
@@ -109,7 +108,8 @@ Construir una suite estadística en la cual podamos utilizar los principales con
 	\begin{verbatim}
 	4 5.6 86.8 6.4 5.6
 	\end{verbatim}
-	\item Siempre debemos limpiar la memoria reservada con el comando \begin{verbatim}delete\end{verbatim}.
+	\item Siempre debemos limpiar la memoria reservada con el comando \begin{verbatim}delete\end{verbatim}
+	\item Es posible cambiar los colores de la consola
 \end{itemize}
 	
 \end{document}
