@@ -27,10 +27,6 @@ double asimetriaPearson( double* x, int n );
 
 double asimetriaBowley( double* x, int n );
 
-double asimetriaFisher( double* x, int n );
-
-double coeficienteApuntamiento( double* x, int n );
-
 int permutacion( int n, int k );
 
 int combinacion( int n, int k );

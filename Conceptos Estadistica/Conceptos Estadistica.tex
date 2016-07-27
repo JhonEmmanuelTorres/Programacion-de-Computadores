@@ -1,0 +1,163 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\title{Informacion Estadistica}
+\date{}
+\author{Jhon Emmanuel Torres}
+\begin{document}
+\maketitle
+\section{Objetivo}
+Dar a conocer los principales conceptos de la estadística para su posterior aplicacion, mostrando por cada uno ejemplos para que sea mas claro para el lector
+
+\section{Conceptos}
+Sean los dos conjuntos\\\\
+$
+A = \left\lbrace  1, 2, 3, 4, 5, 5 \right\rbrace \\
+B = \left\lbrace  6, 7, 8, 9, 9, 10, 10 \right\rbrace  
+$
+
+\subsection{Media Aritmética}
+Sea $x_{1}, \ldots,x_{n}$ una muestra. La \textbf{media aritmética} es
+
+$$ \overline{X} = \dfrac{1}{n} \sum_{i = n}^{n}x_{i} $$
+\begin{flushleft}
+\textbf{Ejemplo:}
+\end{flushleft}
+$
+\overline{X}_{A} = 3.5\\
+\overline{X}_{B} = 9
+$
+
+\subsection{Media Geométrica}
+
+Sea $x_{1}, \ldots,x_{n}$ una muestra. La \textbf{media geométrica} es
+
+$$ \overline{x} = \sqrt[n]{\prod_{i = 1}^{n} x_i } = \sqrt[n]{x_1\cdot x_2 \cdots x_n }
+ $$
+
+\begin{flushleft}
+	\textbf{Ejemplo:}
+\end{flushleft}
+$
+\overline{x}_{A} = 2.90\\
+\overline{x}_{B} = 6.06
+$
+
+
+
+\subsection{Media Armónica}
+
+Dados $n$ numeros $x_{1}, \ldots,x_{n}$. La \textbf{media armónica} es
+
+$$ H = \dfrac{n}{ \dfrac{1}{x_1} + \cdots + \dfrac{1}{x_n} } =  \dfrac{n}{ \sum_{i = 1}^{n} \dfrac{1}{x_i} }
+$$
+
+\begin{flushleft}
+	\textbf{Ejemplo:}
+\end{flushleft}
+$
+H_{A} = 2.41\\
+H_{B} = 8.17
+$
+
+\subsection{Mediana}
+
+Sean $x_{1}, \ldots,x_{n}$ en un orden creciente. La media $M_e$ se define:
+\begin{itemize}
+	\item Sí $n$ es impar: es el valor que ocupa la posición $ M_e = \frac{n+1}{2}$.
+	\begin{flushleft}
+		\textbf{Ejemplo:}
+	\end{flushleft}
+	$ {M_e}_B = 9 $
+	\item Sí $n$ es par: es el promedio de los valores centrales, por lo tanto se define como $ M_e = \dfrac{x_{\frac{n}{2}} + x_{\frac{n}{2}+1} }{2} $
+	\begin{flushleft}
+		\textbf{Ejemplo:}
+	\end{flushleft}
+	$ {M_e}_A = \dfrac{3 + 4}{2} = 3.5 $
+\end{itemize}
+
+\subsection{Moda}
+
+Es el valor con mayor frecuencia en una distribución de datos. Para nuestra suite si hay varias datos con la misma frecuencia vamos a tomar el mayor.
+
+\begin{flushleft}
+	\textbf{Ejemplo:}
+\end{flushleft}
+$
+M_A = 5\\
+M_B = 10
+$
+
+\subsection{Varianza}
+
+La varianza es una medida de dispersión y se define como
+
+$$ \sigma^2 = \dfrac{1}{n} \sum_{i = 1}^{n} \left(  X_i - \overline{X} \right) ^2 $$
+\begin{flushleft}
+	\textbf{Ejemplo:}
+\end{flushleft}
+$
+{\sigma_{A}}^2 = 1.49\\
+{\sigma_{B}}^2 = 1.39
+$
+
+\subsection{Desviación Estándar}
+
+La Desviación Estándar es una medida de dispersión y se define como la raíz cuadrada de la varianza
+
+$$ \sigma = \sqrt{ \dfrac{1}{n} \sum_{i = 1}^{n} \left(  X_i - \overline{X} \right) ^2  }$$
+\begin{flushleft}
+	\textbf{Ejemplo:}
+\end{flushleft}
+$
+{\sigma_{A}} = 1.63\\
+{\sigma_{B}} = 1.51
+$
+
+\subsection{Cuartiles}
+
+Los cuartiles son tres valores que dividen un conjunto de datos ordenados cuatro partes porcentualmente iguales. 
+
+Sean $x_{1}, \ldots,x_{n}$ en un orden creciente. Se define los cuartiles como:
+\begin{itemize}
+	\item Primer Cuartil $(Q_1)$ es la mediana de la primera mitad de valores, por lo tanto es el dato que esta en la posición $\dfrac{n + 1}{4}$.
+	\item Segundo Cuartil $(Q_1)$ es la mediana de los datos
+		\item Primer Cuartil $(Q_1)$ es la mediana de la segundo mitad de valores, por lo tanto es el dato que esta en la posición $\dfrac{3(n + 1)}{4}$.
+\end{itemize}
+
+
+\subsection{Rango Intercuartílico}
+
+El Rango Intercuartílico es la diferencia entre el tercer cuartil y el primer cuartil de los datos.
+$$R = Q_3 - Q_1$$
+
+\subsection{Asimetría de Pearson}
+ Se define como
+ 
+$$ A_p = \dfrac{ \overline{X} - M }{ \sigma } $$
+
+
+\subsection{Asimetría de Bowley}
+Se define como
+
+$$ A_p = \dfrac{ Q_3 + Q_1 - 2M_e }{ Q_3 - Q_1 } $$
+
+\subsection{Permutacion}
+
+Sea $n$ el numero de elementos en el conjunto y $r$ numero de elementos que se desean, entonces las diferentes formas que podemos escoger $r$ elementos teniendo en cuenta el orden es
+
+$$ {P_r}^n = \dfrac{n!}{ \left( n-r \right)! } $$
+
+\subsection{Combinatoria}
+
+Sea $n$ el numero de elementos en el conjunto y $r$ numero de elementos que se desean, entonces las diferentes formas que podemos escoger $r$ elementos sin tener en cuenta el orden es
+
+
+$$ {C_r}^n = \binom{n}{r} = \dfrac{n!}{ \left( n-r \right)! r! } $$
+
+
+\end{document}
